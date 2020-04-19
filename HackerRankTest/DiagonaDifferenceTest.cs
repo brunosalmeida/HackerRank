@@ -12,9 +12,9 @@ namespace HackerRankTest
         {
             var arrays = new List<List<int>>();
 
-            var array0 = new List<int>() { 1, 3, 5 };
-            var array1 = new List<int>() { 7, 9, 11 };
-            var array2 = new List<int>() { 12, 15, 17 };
+            var array0 = new List<int>() { 11, 2, 4 };
+            var array1 = new List<int>() { 4, 5, 6 };
+            var array2 = new List<int>() { 10, 8, -12 };
 
             arrays.Add(array0);
             arrays.Add(array1);
@@ -22,7 +22,7 @@ namespace HackerRankTest
 
             var result = DiagonalDifference.SumRightToLeftDiagonal(arrays);
 
-            Assert.AreEqual((1 + 9 + 17), result);
+            Assert.AreEqual(4, result);
         }
 
         [TestMethod]
@@ -30,9 +30,9 @@ namespace HackerRankTest
         {
             var arrays = new List<List<int>>();
 
-            var array0 = new List<int>() { 1, 3, 5 };
-            var array1 = new List<int>() { 7, 9, 11 };
-            var array2 = new List<int>() { 12, 15, 17 };
+            var array0 = new List<int>() { 11, 2, 4 };
+            var array1 = new List<int>() { 4, 5, 6 };
+            var array2 = new List<int>() { 10, 8, -12 };
 
             arrays.Add(array0);
             arrays.Add(array1);
@@ -40,7 +40,7 @@ namespace HackerRankTest
 
             var result = DiagonalDifference.SumLeftToRightDiagonal(arrays);
 
-            Assert.AreEqual((5 + 9 + 12), result);
+            Assert.AreEqual(19, result);
         }
 
         [TestMethod]
@@ -48,9 +48,9 @@ namespace HackerRankTest
         {
             var arrays = new List<List<int>>();
 
-            var array0 = new List<int>() { 1, 3, 5 };
-            var array1 = new List<int>() { 7, 9, 11 };
-            var array2 = new List<int>() { 12, 15, 17 };
+            var array0 = new List<int>() { 11, 2, 4 };
+            var array1 = new List<int>() { 4, 5, 6 };
+            var array2 = new List<int>() { 10, 8, -12 };
 
             arrays.Add(array0);
             arrays.Add(array1);
@@ -58,7 +58,7 @@ namespace HackerRankTest
 
             var result = DiagonalDifference.Difference(arrays);
 
-            Assert.AreEqual((1 + 9 + 17) - (5 + 9 + 12), result);
+            Assert.AreEqual((11 + 5 - 12) - (4 + 5 + 10), result);
         }
     }
 }
