@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace HackerRank
 {
@@ -8,6 +9,10 @@ namespace HackerRank
         {
             var sumResultRightToLeft = SumRightToLeftDiagonal(arrays);
             var sumResultLeftToRight = SumLeftToRightDiagonal(arrays);
+
+            //Just to pass on HackerRack Tests
+            if ((sumResultRightToLeft - sumResultLeftToRight) < 0)
+                return (sumResultRightToLeft - sumResultLeftToRight) * -1;
 
             return sumResultRightToLeft - sumResultLeftToRight;
         }
