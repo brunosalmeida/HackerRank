@@ -11,8 +11,8 @@ namespace HackerRank
             var sumResultLeftToRight = SumLeftToRightDiagonal(arrays);
 
             //Just to pass on HackerRack Tests
-            if ((sumResultRightToLeft - sumResultLeftToRight) < 0)
-                return (sumResultRightToLeft - sumResultLeftToRight) * -1;
+            //if ((sumResultRightToLeft - sumResultLeftToRight) < 0)
+            //    return (sumResultRightToLeft - sumResultLeftToRight) * -1;
 
             return sumResultRightToLeft - sumResultLeftToRight;
         }
