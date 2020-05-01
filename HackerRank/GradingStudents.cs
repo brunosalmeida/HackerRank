@@ -12,34 +12,16 @@ namespace HackerRank
             {
                 if (grade > 100) continue;
 
-                if (grade < 38)
+                if (grade < 38 || grade % 5 < 3)
                 {
                     result.Add(grade);
                     continue;
                 }
-
-                var isMultiple = false;
-                var number = grade;
-
-                while (!isMultiple)
+                else
                 {
-                    if (number % 5 == 0)
-                        isMultiple = true;
-                    else
-                        number++;
+                    result.Add(grade + (5 - grade % 5));
                 }
-
-                if (number == grade)
-                {
-                    result.Add(grade);
-                    continue;
-                }
-
-                if (number - grade < 3)
-                    result.Add(number);
-
-                if (number - grade == 3)
-                    result.Add(grade);
+               
             }
 
             return result;
